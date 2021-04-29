@@ -1,0 +1,85 @@
+html {
+  font-size: 16px;
+}
+body {
+  background-color: rgb(15, 23, 30);
+  color: white;
+}
+
+.strive-bg {
+  background: linear-gradient(180deg, rgb(27, 37, 48) 0, rgba(27, 37, 48, 0.85));
+}
+
+#strive-logo {
+  width: 100px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  height: 7vh;
+}
+
+body {
+  padding-top: 7vh;
+}
+
+nav .dropdown-menu {
+  background-color: rgb(15, 23, 30);
+  color: white;
+}
+
+.dropdown-item {
+  color: #ffffffae;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: rgb(45, 58, 70);
+  color: white;
+}
+
+nav .btn:focus {
+  box-shadow: none;
+}
+
+.container-fluid h5::before {
+  content: "Strive ";
+  color: orange;
+}
+
+.rent-badge {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  font-size: 1.2em;
+}
+
+/* .carousel-item img {
+  height: 225px;
+  object-fit: cover;
+} */
+
+.reposition {
+  object-position: 50% 70%;
+}
+
+footer {
+  min-height: 100px;
+}
+
+footer img {
+  width: 100px;
+}
+
+/* .center-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  color: black;
+  padding: 1em;
+  transform: translateX(-50%) translateY(-50%);
+} */
