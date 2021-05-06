@@ -1,3 +1,9 @@
+@import url(/css/keyframes.css);
+
+:root {
+  --bg-tint: 15, 23, 30;
+}
+
 html {
   font-size: 16px;
 }
@@ -53,7 +59,7 @@ nav .btn:focus {
 .rent-badge {
   position: absolute;
   top: 0px;
-  left: 15px;
+  left: 0px;
   font-size: 1.2em;
 }
 
@@ -83,3 +89,165 @@ footer img {
   padding: 1em;
   transform: translateX(-50%) translateY(-50%);
 } */
+
+.movie-card {
+  position: relative;
+  transition: transform 0.4s linear;
+}
+
+.movie-card:hover {
+  z-index: 1;
+  transform: scale(1.05);
+}
+
+.movie-card-body {
+  /* display: none; */
+  /* visibility: hidden; */
+  opacity: 0;
+  position: absolute;
+  top: 90%;
+  background-color: rgb(15, 23, 30);
+  transition: all 0.4s linear; /* <property-name> <transition-time> <timing-function>*/
+  padding: 1em 2em;
+  /* transform: translateY(-10%); */
+}
+
+.movie-card-body p {
+  font-size: 0.9em;
+}
+
+.movie-card:hover .movie-card-body {
+  /* display: block; */
+  /* visibility: visible; */
+  /* transform: translateY(0%); */
+  top: 100%;
+  opacity: 1;
+}
+
+.movie-card-body::before {
+  /* This will be showing up together with the .movie-card-body content*/
+  /* Therefore it will be transitioning together with it.*/
+  content: ""; /* to have a psuedo element display we need a content even if empty*/
+  /* same dimentions of the closest parent with a position value set (in this case, .movie-card-body itself*/
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: -19%;
+  left: 0px;
+  /*linear-gradient is actually a background-image cssgradient.io*/
+  background: linear-gradient(
+    0deg,
+    rgba(var(--bg-tint), 1) 0%,
+    rgba(var(--bg-tint), 1) 19%,
+    rgba(var(--bg-tint), 0) 97%
+  );
+}
+
+.movie-card-body > div {
+  position: relative;
+  top: -0.7em;
+}
+
+.movie-card-body > div > span {
+  font-size: 0.6em;
+  margin: auto auto auto 0em;
+  color: gold;
+}
+
+.movie-card-body ion-icon {
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+.movie-card-body ion-icon:last-of-type {
+  /*removing padding on the right of last icon*/
+  padding: 0.5em 0px 0.5em 0.5em;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#strive-logo-splashscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0.5);
+  animation: blur-in 2s linear forwards;
+}
+
+#splashscreen-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(var(--bg-tint), 0.85);
+}
+
+#splashscreen {
+  position: relative;
+  z-index: 10;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: fade-in 4s cubic-bezier(0.61, 0.01, 0.48, 0.99) 2s reverse forwards;
+
+  /* animation-name: ; the name of the keyframe identifier
+  animation-duration: ; how long the animation will last after the delay
+  animation-timing-function: ; the function definining the behavior of the animation 
+  animation-delay: ; how much time before the animation starts
+  animation-iteration-count: ; how much times the animation will be played
+  animation-direction: ; the direction of the keyframes, from 0 to 100 generally with 'normal'
+  animation-fill-mode: defines which CSS properties are applied after the animation is over. 
+    -> With 'forwards', properties at 100% keyframes will stick
+  */
+}
+
+#alert {
+  position: fixed;
+  bottom: 3em;
+  left: 3em;
+  padding: 0px;
+}
+
+#alert::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 10px 7.5px 0;
+  border-color: transparent#bee5eb transparent transparent;
+}
+
+#alert > div {
+  /* background: linear-gradient(90deg, #bee5eb, white); */
+  background: linear-gradient(
+    90deg,
+    rgba(27, 37, 48, 1) 0%,
+    rgba(214, 234, 255, 1) 19%,
+    rgba(59, 255, 0, 1) 36%,
+    rgba(109, 123, 138, 1) 63%,
+    rgba(255, 255, 255, 1) 68%,
+    rgba(27, 37, 48, 0.9122023809523809) 97%
+  );
+
+  padding: 1em 2em;
+  background-size: 200%;
+  animation: infiniteBg 3s linear infinite;
+}
+
+.slide-in-blurred-left {
+  -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.slide-out-blurred-left {
+  -webkit-animation: slide-out-blurred-left 0.45s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+  animation: slide-out-blurred-left 0.45s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+}

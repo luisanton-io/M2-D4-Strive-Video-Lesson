@@ -15,6 +15,12 @@
 </head>
 
 <body>
+
+  <div id="splashscreen" onanimationend="displayMessage()">
+    <div id="splashscreen-overlay"></div>
+    <img id="strive-logo-splashscreen" src="logo/strivevideo.png">
+  </div>
+
   <nav class="navbar navbar-expand-lg navbar-dark strive-bg">
     <img id="strive-logo" src="logo/strivevideo.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -87,65 +93,94 @@
     <div class="my-4">
       <h5 class="d-inline">Popular</h5>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-      <div class="col">
-        <img class="img-fluid" src="movies/1-1.jpg">
-        <span class="rent-badge badge badge-warning">Rent this</span>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 no-gutters pl-4">
+      <div class="col px-1">
+
+        <div class="movie-card">
+
+          <img class="img-fluid w-100" src="movies/1-1.jpg">
+
+          <span class="rent-badge badge badge-warning">Rent this</span>
+
+          <div class="movie-card-body">
+            <div class="d-flex justify-content-end">
+              <span>Rent or Buy €4.99 - €8.99</span>
+
+              <ion-icon name="play-sharp" data-trigger="hover" data-toggle="popover" data-placement="top"
+                data-content="Watch">
+              </ion-icon>
+              <ion-icon name="add-sharp" data-trigger="hover" data-toggle="popover" data-placement="top"
+                data-content="Add to Watchlist"></ion-icon>
+              <ion-icon name="ban-sharp" data-trigger="hover" data-toggle="popover" data-placement="top"
+                data-content="Hide this movie"></ion-icon>
+            </div>
+            <p class="line-clamp">
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio animi ipsum ex nobis? Velit non
+              fugit, exercitationem magni deserunt omnis alias quasi tempore mollitia officiis animi placeat harum
+              earum?
+            </p>
+          </div>
+
+
+        </div>
+
+
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/1-2.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/1-2.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/1-3.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/1-3.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/1-4.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/1-4.jpg">
       </div>
       <!-- <div class="col col-sm-6 col-md-4 col-lg-3">
-        <img class="img-fluid" src="movies/1-1.jpg">
+        <img class="img-fluid w-100" src="movies/1-1.jpg">
       </div>
       <div class="col col-sm-6 col-md-4 col-lg-3">
-        <img class="img-fluid" src="movies/1-2.jpg">
+        <img class="img-fluid w-100" src="movies/1-2.jpg">
       </div>
       <div class="col col-sm-6 col-md-4 col-lg-3">
-        <img class="img-fluid" src="movies/1-3.jpg">
+        <img class="img-fluid w-100" src="movies/1-3.jpg">
       </div>
       <div class="col col-sm-6 col-md-4 col-lg-3">
-        <img class="img-fluid" src="movies/1-4.jpg">
+        <img class="img-fluid w-100" src="movies/1-4.jpg">
       </div> -->
     </div>
     <div class="my-4">
       <h5>Golden Globe</h5>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-      <div class="col">
-        <img class="img-fluid" src="movies/2-1.jpg">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 no-gutters pl-4">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/2-1.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/2-2.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/2-2.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/2-3.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/2-3.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/2-4.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/2-4.jpg">
       </div>
     </div>
     <div class="my-4">
       <h5>Another category</h5>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-      <div class="col">
-        <img class="img-fluid" src="movies/3-1.jpg">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 no-gutters pl-4">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/3-1.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/3-2.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/3-2.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/3-3.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/3-3.jpg">
       </div>
-      <div class="col">
-        <img class="img-fluid" src="movies/3-4.jpg">
+      <div class="col px-1">
+        <img class="img-fluid w-100" src="movies/3-4.jpg">
       </div>
     </div>
   </main>
@@ -163,6 +198,11 @@
 
   </footer>
 
+  <div id="alert" class="d-none alert alert-info slide-in-blurred-left" role="alert">
+    <div>
+      A simple info alert—check it out!
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -170,6 +210,31 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+  <script>
+
+    const alertMessage = document.querySelector('#alert')
+
+    function displayMessage() {
+      alertMessage.classList.remove("d-none")
+
+      setTimeout(() => {
+        alertMessage.classList.add("slide-out-blurred-left")
+      }, 6000)
+    }
+
+
+  </script>
+
+  <script>
+
+    // Enable popovers everywhere:
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+  </script>
 
 </body>
 
